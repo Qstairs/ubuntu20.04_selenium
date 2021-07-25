@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+    selenium:
+        image: selenium
+        container_name: selenium
+        build: .
+        platform: linux/amd64
+        volumes:
+        - ./data:/tmp/data
+        tty: true
+        stdin_open: true
+        privileged: true
